@@ -20,6 +20,7 @@ jobs:
           name: Deploy App in Vercel
           command: |
             URL=$(vercel --public -t $VERCEL_TOKEN --confirm)
+            echo $URL
             curl --silent -L $URL
 
 workflows:
